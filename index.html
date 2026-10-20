@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Courtly — пошук і бронювання спортивних майданчиків</title>
+  <meta name="description" content="Знайдіть і забронюйте футбольне поле, тенісний корт, баскетбольний чи волейбольний майданчик у п'яти містах України.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400..800&display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти до змісту</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="./">
+        <img src="img/logo-mark.svg" alt="" width="40" height="40">
+        <span>Courtly</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Основна навігація">
+        <ul class="site-nav__list">
+          <li><a href="#search">Пошук</a></li>
+          <li><a href="#venues">Майданчики</a></li>
+          <li><a href="#contacts">Контакти</a></li>
+        </ul>
+      </nav>
+
+      <button class="button button--outline bookings-toggle" type="button">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span class="bookings-toggle__label">Мої бронювання</span>
+        <span class="badge" id="bookings-count">0</span>
+      </button>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="visually-hidden">Меню</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="search" id="search" aria-labelledby="search-title">
+      <div class="container">
+        <h1 id="search-title">Знайдіть майданчик для гри</h1>
+        <p class="lead">Футбол, теніс, баскетбол і волейбол у п'яти містах України — з бронюванням за хвилину.</p>
+
+        <form class="search-form" id="search-form">
+          <div class="field">
+            <label for="city">Місто</label>
+            <select id="city" name="city">
+              <option value="">Усі міста</option>
+              <option>Київ</option>
+              <option>Львів</option>
+              <option>Одеса</option>
+              <option>Харків</option>
+              <option>Дніпро</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="sport">Вид спорту</label>
+            <select id="sport" name="sport">
+              <option value="">Усі види</option>
+              <option>Футбол</option>
+              <option>Теніс</option>
+              <option>Баскетбол</option>
+              <option>Волейбол</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="date">Дата</label>
+            <input id="date" name="date" type="date" required>
+          </div>
+
+          <button class="button button--primary search-form__submit" type="submit">Знайти</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="results" id="venues" aria-labelledby="venues-title">
+      <div class="container">
+        <div class="results__head">
+          <h2 id="venues-title">Майданчики</h2>
+          <p class="results__status" id="status" role="status">Завантаження…</p>
+        </div>
+        <div class="results__grid" id="results" aria-busy="true"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="container site-footer__inner">
+      <p class="site-footer__brand">Courtly</p>
+      <ul class="site-footer__contacts">
+        <li><a href="mailto:hello@courtly.example">hello@courtly.example</a></li>
+        <li><a href="tel:+380441234567">+380 44 123 45 67</a></li>
+      </ul>
+      <p class="site-footer__note">Навчальний проєкт. Courtly — вигаданий сервіс.</p>
+    </div>
+  </footer>
+
+  <dialog class="dialog" id="booking-dialog" aria-labelledby="booking-title">
+    <form class="booking-form" id="booking-form">
+      <h2 class="dialog__title" id="booking-title" data-field="name"></h2>
+      <p class="dialog__meta" data-field="place"></p>
+
+      <dl class="booking-form__summary">
+        <div>
+          <dt>Дата</dt>
+          <dd data-field="date"></dd>
+        </div>
+      </dl>
+
+      <div class="booking-form__fields">
+        <div class="field">
+          <label for="booking-time">Початок</label>
+          <select id="booking-time" name="time">
+            <option>08:00</option>
+            <option>09:00</option>
+            <option>10:00</option>
+            <option>11:00</option>
+            <option>12:00</option>
+            <option>13:00</option>
+            <option>14:00</option>
+            <option>15:00</option>
+            <option>16:00</option>
+            <option>17:00</option>
+            <option selected>18:00</option>
+            <option>19:00</option>
+            <option>20:00</option>
+            <option>21:00</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="booking-hours">Тривалість</label>
+          <select id="booking-hours" name="hours">
+            <option value="1">1 година</option>
+            <option value="2">2 години</option>
+            <option value="3">3 години</option>
+          </select>
+        </div>
+      </div>
+
+      <p class="booking-form__total">До сплати: <strong data-field="total"></strong></p>
+
+      <div class="dialog__actions">
+        <button class="button button--outline" type="button" data-action="cancel">Скасувати</button>
+        <button class="button button--primary" type="submit">Підтвердити</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="dialog" id="bookings-dialog" aria-labelledby="bookings-title">
+    <h2 class="dialog__title" id="bookings-title">Мої бронювання</h2>
+    <ul class="bookings-list" id="bookings-list"></ul>
+    <p class="bookings-empty" id="bookings-empty">Бронювань ще немає.</p>
+    <div class="dialog__actions">
+      <button class="button button--outline" type="button" data-action="close">Закрити</button>
+    </div>
+  </dialog>
+</body>
+</html>

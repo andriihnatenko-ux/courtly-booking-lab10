@@ -1,0 +1,81 @@
+/*
+ * Courtly — design tokens.
+ *
+ * Скопіюйте цей блок на початок власного CSS. Назви змінних можна змінювати,
+ * значення — ні: вони відповідають макету, а пари «текст / фон» нижче
+ * перевірені на контраст WCAG 2.2 AA.
+ *
+ * Шрифт: Montserrat (variable, 400–800) з підмножинами latin + cyrillic.
+ */
+:root {
+  /* ---------- Colors ---------- */
+  --color-primary: #0b6e4f;          /* кнопки, посилання, акценти */
+  --color-primary-hover: #085a40;
+  --color-primary-soft: #e3f1ea;     /* фон чипів «вид спорту» */
+  --color-accent: #c6f432;           /* лайм: CTA на темному фоні, номери кроків */
+  --color-accent-hover: #b3e01f;
+
+  --color-background: #f6f8f5;       /* фон сторінки */
+  --color-surface: #ffffff;          /* картки, форма, header */
+  --color-surface-alt: #eaf1ec;      /* секція «Як це працює» */
+  --color-border: #d5dfd8;
+
+  --color-text: #13201a;             /* основний текст */
+  --color-text-muted: #4a5a52;       /* описи, підписи */
+
+  --color-dark: #0f2a1f;             /* фон Final CTA та footer */
+  --color-on-dark: #f1f7f3;
+  --color-on-dark-muted: #b4c7bb;
+
+  --color-rating: #a15c00;           /* зірка рейтингу */
+  --color-focus: #0b6e4f;            /* на темних секціях перевизначити на --color-accent */
+
+  /* ---------- Typography ---------- */
+  --font-family-base: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 800;
+
+  /* Fluid: лінійно між viewport 375px і 1440px */
+  --font-size-h1: clamp(2rem, 1.472rem + 2.254vw, 3.5rem);        /* 32 → 56px */
+  --font-size-h2: clamp(1.625rem, 1.317rem + 1.315vw, 2.5rem);    /* 26 → 40px */
+  --font-size-h3: clamp(1.1875rem, 1.121rem + 0.282vw, 1.375rem); /* 19 → 22px */
+  --font-size-lead: clamp(1.0625rem, 0.996rem + 0.282vw, 1.25rem); /* 17 → 20px */
+  --font-size-base: 1rem;            /* 16px */
+  --font-size-small: 0.875rem;       /* 14px */
+  --font-size-xs: 0.8125rem;         /* 13px: чипи, eyebrow */
+
+  --line-height-tight: 1.15;         /* заголовки */
+  --line-height-base: 1.6;           /* текст */
+
+  /* ---------- Spacing (крок 4px) ---------- */
+  --space-2xs: 0.25rem;  /*  4px */
+  --space-xs: 0.5rem;    /*  8px */
+  --space-sm: 0.75rem;   /* 12px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+  --space-3xl: 4rem;     /* 64px */
+  --space-section: clamp(3.5rem, 2.5rem + 4vw, 6rem); /* вертикальний відступ секцій */
+
+  /* ---------- Layout ---------- */
+  --container-max: 75rem;                              /* 1200px */
+  --container-gutter: clamp(1rem, 0.5rem + 2vw, 2rem); /* 16 → 32px */
+  --header-height: 4.5rem;                             /* 72px */
+  --control-height: 3rem;                              /* 48px: кнопки та поля */
+
+  /* ---------- Shape & depth ---------- */
+  --radius-sm: 0.5rem;   /*  8px: поля, чипи */
+  --radius-md: 0.75rem;  /* 12px: кнопки */
+  --radius-lg: 1.25rem;  /* 20px: картки, зображення, CTA */
+  --radius-pill: 999px;
+
+  --border-width: 1px;
+  --shadow-sm: 0 1px 2px rgb(15 42 31 / 0.06), 0 1px 3px rgb(15 42 31 / 0.08);
+  --shadow-md: 0 12px 32px -12px rgb(15 42 31 / 0.25);
+
+  --transition-fast: 150ms ease;
+}

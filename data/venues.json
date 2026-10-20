@@ -1,0 +1,134 @@
+[
+  {
+    "id": "arena-sport",
+    "name": "Arena Sport",
+    "city": "Київ",
+    "sport": "Футбол",
+    "pricePerHour": 450,
+    "rating": 4.9,
+    "description": "Поле 40×20 м зі штучним газоном 4G, вечірнім освітленням і роздягальнями.",
+    "image": "img/venues/arena-sport.webp",
+    "imageAlt": "Футбольне поле Arena Sport під прожекторами"
+  },
+  {
+    "id": "smash-club",
+    "name": "Smash Club",
+    "city": "Львів",
+    "sport": "Теніс",
+    "pricePerHour": 500,
+    "rating": 4.8,
+    "description": "Два ґрунтові корти та тренер за попереднім записом.",
+    "image": "img/venues/smash-club.webp",
+    "imageAlt": "Тенісний корт Smash Club"
+  },
+  {
+    "id": "tennis-point",
+    "name": "Tennis Point",
+    "city": "Київ",
+    "sport": "Теніс",
+    "pricePerHour": 350,
+    "rating": 4.7,
+    "description": "Хардовий корт під накриттям — грати можна за будь-якої погоди. Оренда ракеток.",
+    "image": "img/venues/tennis-point.webp",
+    "imageAlt": "Тенісний корт Tennis Point"
+  },
+  {
+    "id": "active-hall",
+    "name": "Active Hall",
+    "city": "Одеса",
+    "sport": "Волейбол",
+    "pricePerHour": 380,
+    "rating": 4.7,
+    "description": "Критий зал із професійним покриттям, сіткою та трибуною для глядачів.",
+    "image": "img/venues/active-hall.webp",
+    "imageAlt": "Волейбольний зал Active Hall"
+  },
+  {
+    "id": "riverside-court",
+    "name": "Riverside Court",
+    "city": "Дніпро",
+    "sport": "Баскетбол",
+    "pricePerHour": 400,
+    "rating": 4.6,
+    "description": "Повнорозмірний відкритий майданчик на набережній з новими кільцями.",
+    "image": "img/venues/riverside-court.webp",
+    "imageAlt": "Баскетбольний майданчик Riverside Court"
+  },
+  {
+    "id": "city-football",
+    "name": "City Football",
+    "city": "Харків",
+    "sport": "Футбол",
+    "pricePerHour": 420,
+    "rating": 4.5,
+    "description": "Міні-поле 5×5 у центрі міста. М'ячі та манішки надаються.",
+    "image": "img/venues/city-football.webp",
+    "imageAlt": "Міні-футбольне поле City Football"
+  },
+  {
+    "id": "green-field",
+    "name": "Green Field",
+    "city": "Львів",
+    "sport": "Футбол",
+    "pricePerHour": 400,
+    "rating": 4.4,
+    "description": "Поле 7×7 біля парку, роздягальні та паркування для гостей.",
+    "image": "img/venues/green-field.webp",
+    "imageAlt": "Футбольне поле Green Field"
+  },
+  {
+    "id": "royal-court",
+    "name": "Royal Court",
+    "city": "Львів",
+    "sport": "Теніс",
+    "pricePerhour": 1200,
+    "rating": 4.4,
+    "description": "Критий корт преміум-класу: кондиціювання, персональний тренер, прокат екіпірування.",
+    "image": "img/venues/royal-court.webp",
+    "imageAlt": "Тенісний корт Royal Court"
+  },
+  {
+    "id": "sea-volley",
+    "name": "Sea Volley",
+    "city": "Одеса",
+    "sport": "Волейбол",
+    "pricePerHour": 350,
+    "rating": 4.4,
+    "description": "Зал на два волейбольні майданчики поруч із морем. Душові та паркування.",
+    "image": "img/venues/sea-volley.webp",
+    "imageAlt": "Волейбольний зал Sea Volley"
+  },
+  {
+    "id": "hoop-point",
+    "name": "Hoop Point",
+    "city": "Київ",
+    "sport": "Баскетбол",
+    "pricePerHour": 300,
+    "rating": 4.3,
+    "description": "Відкритий майданчик для гри 3×3 з вечірнім освітленням.",
+    "image": "img/venues/hoop-point.webp",
+    "imageAlt": "Баскетбольний майданчик Hoop Point"
+  },
+  {
+    "id": "dnipro-futsal",
+    "name": "Dnipro Futsal",
+    "city": "Дніпро",
+    "sport": "Футбол",
+    "pricePerHour": 380,
+    "rating": 4.2,
+    "description": "Поле 5×5 зі штучним газоном і навісом від дощу.",
+    "image": "img/venues/dnipro-futsal.webp",
+    "imageAlt": "Футбольне поле Dnipro Futsal"
+  },
+  {
+    "id": "kharkiv-tennis-center",
+    "name": "Kharkiv Tennis Center",
+    "city": "Харків",
+    "sport": "Теніс",
+    "pricePerHour": 450,
+    "rating": 4.1,
+    "description": "Три хардові корти, прокат ракеток і групові тренування.",
+    "image": "img/venues/kharkiv-tennis-center.webp",
+    "imageAlt": "Тенісний корт Kharkiv Tennis Center"
+  }
+]
